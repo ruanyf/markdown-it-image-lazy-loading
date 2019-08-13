@@ -11,7 +11,9 @@
     "markdown-it",
     "lazyload"
   ],
-  "author": "Ruan Yifeng<yifeng.ruan@gmail.com>",
+  "author": "Ruan Yifeng <yifeng.ruan@gmail.com>",
+  "homepage": "https://github.com/ruanyf/markdown-it-image-lazy-loading",
+  "repository": "https://github.com/ruanyf/markdown-it-image-lazy-loading.git",
   "license": "MIT",
   "devDependencies": {
     "markdown-it": "^9.1.0",
