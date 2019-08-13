@@ -10,7 +10,7 @@ $ npm install markdown-it-image-lazy-loading
 
 ```javascript
 const md = require('markdown-it')();
-const lazy_loading = require('./index.js');
+const lazy_loading = require('markdown-it-image-lazy-loading');
 md.use(lazy_loading);
 
 md.render(`![](example.png "image title")`);
