@@ -1,6 +1,6 @@
 {
   "name": "markdown-it-image-lazy-loading",
-  "version": "1.0.3",
+  "version": "1.0.2",
   "description": "a markdown-it plugin supporting Chrome 75's native image lazy-loading",
   "main": "index.js",
   "scripts": {
