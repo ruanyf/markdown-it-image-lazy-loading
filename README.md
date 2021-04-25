@@ -17,6 +17,28 @@ md.render(`![](example.png "image title")`);
 // <p><img src="example.png" alt="" title="image title" loading="lazy"></p>\n
 ```
 
+The plugin can also add `width` and `height` attributes to each image. This can prevent [cumulative layout shifts (CLS)](https://web.dev/cls/):
+
+```javascript
+md.use(lazy_loading, {
+    image_size: true,
+
+    // Where your images are stored
+    base_path: __dirname + 'src/', 
+});
+
+md.render(`![](example.png "image title")`);
+// <p><img src="example.png" alt="" title="image title" loading="lazy" width="100" height="100"></p>\n
+```
+
+To keep images responsive, also include the following CSS:
+```css
+img{
+    max-width: 100%;
+    height: auto;
+}
+```
+
 ## License
 
 MIT
