@@ -14,7 +14,7 @@ module.exports = function lazy_loading_plugin(md, mdOptions) {
       const imgSrc = token.attrGet('src');
       const imgPath = path.join(mdOptions.base_path, imgSrc);
       const dimensions = sizeOf(imgPath);
-      
+
       token.attrSet('width', dimensions.width);
       token.attrSet('height', dimensions.height);
     }

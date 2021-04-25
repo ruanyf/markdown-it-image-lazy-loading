@@ -24,7 +24,7 @@ md.use(lazy_loading, {
     image_size: true,
 
     // Where your images are stored
-    base_path: __dirname + 'src/', 
+    base_path: __dirname + 'src/',
 });
 
 md.render(`![](example.png "image title")`);

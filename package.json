@@ -4,7 +4,7 @@
   "description": "a markdown-it plugin supporting Chrome 75's native image lazy-loading",
   "main": "index.js",
   "scripts": {
-    "test": "node testing.js"
+    "test": "npx tape test/*.js"
   },
   "keywords": [
     "markdown-it-plugin",
@@ -15,9 +15,11 @@
   "homepage": "https://github.com/ruanyf/markdown-it-image-lazy-loading",
   "repository": "https://github.com/ruanyf/markdown-it-image-lazy-loading.git",
   "license": "MIT",
+  "dependencies": {
+    "image-size": "^1.0.0"
+  },
   "devDependencies": {
-    "image-size": "^1.0.0",
-    "markdown-it": "^9.1.0",
-    "tape": "^4.11.0"
+    "markdown-it": "12.x",
+    "tape": "5.x"
   }
 }
