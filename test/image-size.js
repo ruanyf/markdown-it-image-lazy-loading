@@ -12,7 +12,7 @@ test('image size test', function (t) {
 
   t.equal(
     md.render(`![](dummy-200x200.png "image title")`),
-    '<p><img src="dummy-200x200.png" alt="" title="image title" loading="lazy" width="200" height="200"></p>\n'
+    '<p><img src="dummy-200x200.png" alt="" title="image title" loading="lazy" decoding="async" width="200" height="200"></p>\n'
   );
 
 });

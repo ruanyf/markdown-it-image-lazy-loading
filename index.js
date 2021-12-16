@@ -6,6 +6,7 @@ module.exports = function lazy_loading_plugin(md, mdOptions) {
   md.renderer.rules.image = function (tokens, idx, options, env, self) {
     var token = tokens[idx];
     token.attrSet('loading', 'lazy');
+    token.attrSet('decoding', 'async');
 
     if(mdOptions && mdOptions.base_path && mdOptions.image_size === true){
       const sizeOf = require('image-size');
