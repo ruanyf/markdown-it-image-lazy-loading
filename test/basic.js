@@ -9,7 +9,7 @@ test('lazy loading test', function (t) {
 
   t.equal(
     md.render(`![](example.png "image title")`),
-    '<p><img src="example.png" alt="" title="image title" loading="lazy"></p>\n'
+    '<p><img src="example.png" alt="" title="image title" loading="lazy" decoding="async"></p>\n'
   );
 
 });
