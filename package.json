@@ -19,7 +19,7 @@
     "image-size": "^1.0.0"
   },
   "devDependencies": {
-    "markdown-it": "12.x",
-    "tape": "5.x"
+    "markdown-it": "^12.3.0",
+    "tape": "^5.3.2"
   }
 }

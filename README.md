@@ -14,6 +14,17 @@ const lazy_loading = require('markdown-it-image-lazy-loading');
 md.use(lazy_loading);
 
 md.render(`![](example.png "image title")`);
+// <p><img src="example.png" alt="" title="image title" loading="lazy"></p>\n
+```
+
+If you want the `decoding="async"` attribute, enable the plugin's `decoding` option.
+
+```javascript
+md.use(lazy_loading, {
+  decoding: true,
+});
+
+md.render(`![](example.png "image title")`);
 // <p><img src="example.png" alt="" title="image title" loading="lazy" decoding="async"></p>\n
 ```
 
@@ -21,14 +32,14 @@ The plugin can also add `width` and `height` attributes to each image. This can 
 
 ```javascript
 md.use(lazy_loading, {
-    image_size: true,
+  image_size: true,
 
-    // Where your images are stored
-    base_path: __dirname + 'src/',
+  // Where your images are stored
+  base_path: __dirname + 'src/',
 });
 
 md.render(`![](example.png "image title")`);
-// <p><img src="example.png" alt="" title="image title" loading="lazy" decoding="async" width="100" height="100"></p>\n
+// <p><img src="example.png" alt="" title="image title" loading="lazy" width="100" height="100"></p>\n
 ```
 
 To keep images responsive, also include the following CSS:
