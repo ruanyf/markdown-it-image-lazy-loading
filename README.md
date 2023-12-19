@@ -12,7 +12,7 @@ Load it in ES module.
 
 ```javascript
 import markdownit from 'markdown-it';
-import lazy_loading from 'markdown-it-lazy-loading';
+import lazy_loading from 'markdown-it-image-lazy-loading';
 
 const md = markdownit();
 md.use(lazy_loading);
