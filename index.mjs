@@ -1,6 +1,7 @@
-'use strict';
+import imageSize from 'image-size';
+import path from 'node:path';
 
-module.exports = function lazy_loading_plugin(md, mdOptions) {
+function lazy_loading_plugin(md, mdOptions) {
   var defaultImageRenderer = md.renderer.rules.image;
 
   md.renderer.rules.image = function (tokens, idx, options, env, self) {
@@ -12,12 +13,9 @@ module.exports = function lazy_loading_plugin(md, mdOptions) {
     }
 
     if (mdOptions && mdOptions.base_path && mdOptions.image_size === true) {
-      const sizeOf = require('image-size');
-      const path = require('path');
-
       const imgSrc = token.attrGet('src');
       const imgPath = path.join(mdOptions.base_path, imgSrc);
-      const dimensions = sizeOf(imgPath);
+      const dimensions = imageSize(imgPath);
 
       token.attrSet('width', dimensions.width);
       token.attrSet('height', dimensions.height);
@@ -26,3 +24,6 @@ module.exports = function lazy_loading_plugin(md, mdOptions) {
     return defaultImageRenderer(tokens, idx, options, env, self);
   };
 };
+
+export default lazy_loading_plugin;
+

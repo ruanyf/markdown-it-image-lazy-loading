@@ -13,4 +13,3 @@ test('lazy loading test', function (t) {
   );
 
 });
-

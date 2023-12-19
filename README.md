@@ -8,6 +8,20 @@ $ npm install markdown-it-image-lazy-loading
 
 ## Usage
 
+Load it in ES module.
+
+```javascript
+import markdownit from 'markdown-it';
+import lazy_loading from 'markdown-it-lazy-loading';
+
+const md = markdownit();
+md.use(lazy_loading);
+md.render(`![](example.png "image title")`);
+// <p><img src="example.png" alt="" title="image title" loading="lazy"></p>\n
+```
+
+Or load it in CommonJS module.
+
 ```javascript
 const md = require('markdown-it')();
 const lazy_loading = require('markdown-it-image-lazy-loading');
