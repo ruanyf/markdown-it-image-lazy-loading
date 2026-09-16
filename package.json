@@ -24,10 +24,10 @@
   "repository": "https://github.com/ruanyf/markdown-it-image-lazy-loading.git",
   "license": "MIT",
   "dependencies": {
-    "image-size": "^1.0.0"
+    "image-size": "^2.0.0"
   },
   "devDependencies": {
-    "markdown-it": "^14.0.0",
+    "markdown-it": "^15.0.0",
     "rollup": "^4.9.1",
     "tape": "^5.3.2"
   }

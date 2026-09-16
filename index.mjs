@@ -1,5 +1,6 @@
-import imageSize from 'image-size';
+import { imageSize } from 'image-size';
 import path from 'node:path';
+import { readFileSync } from 'node:fs';
 
 function lazy_loading_plugin(md, mdOptions) {
   var defaultImageRenderer = md.renderer.rules.image;
@@ -15,7 +16,8 @@ function lazy_loading_plugin(md, mdOptions) {
     if (mdOptions && mdOptions.base_path && mdOptions.image_size === true) {
       const imgSrc = token.attrGet('src');
       const imgPath = path.join(mdOptions.base_path, imgSrc);
-      const dimensions = imageSize(imgPath);
+      const buffer = readFileSync(imgPath);
+      const dimensions = imageSize(buffer);
 
       token.attrSet('width', dimensions.width);
       token.attrSet('height', dimensions.height);

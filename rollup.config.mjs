@@ -4,5 +4,5 @@ export default {
 		file: 'index.js',
 		format: 'cjs'
 	},
-	external: ['image-size', 'node:path']
+  external: ['image-size', 'node:path', 'node:fs']
 };
